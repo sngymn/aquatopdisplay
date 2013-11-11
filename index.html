@@ -356,19 +356,5 @@
   ga('send', 'pageview');
 
 </script>
-	<script type="text/javascript">
-jQuery(function() {
-    /* click tracking google ana */
-    jQuery("a").click(function(e) {
-        var ahref = jQuery(this).attr('href');
-        if (ahref.indexOf("http://sngymn.github.io/aquatopdisplay/") != -1 || ahref.indexOf("http") == -1 ) {
-            _gaq.push(['_trackEvent', 'Inbound Links', 'Click', ahref]);
-        }
-        else {
-            _gaq.push(['_trackEvent', 'Outbound Links', 'Click', ahref]);
-        }
-    });
-});
-</script>
 </body>
 </html>
