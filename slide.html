@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="assets/css/slide.css">
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+		
+		<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+		<!-- Slider Plugin -->
+		<script type="text/javascript" src="assets/js/jquery.glide.min.js"></script>
+	</head>
+	<body>
+		
+		<div class="slider">
+			<ul class="slides">
+				<li class="slide expl-01"></li>
+				<li class="slide expl-02"></li>
+				<li class="slide expl-03"></li>
+				<li class="slide expl-04"></li>
+				<li class="slide expl-05"></li>
+				<li class="slide expl-06"></li>
+				<li class="slide expl-07"></li>
+				<li class="slide expl-08"></li>
+				<li class="slide expl-09"></li>
+				<li class="slide expl-10"></li>
+				<li class="slide expl-11"></li>
+				<li class="slide expl-12"></li>
+				<li class="slide expl-13"></li>
+				<li class="slide expl-14"></li>
+			</ul>
+		</div>
+
+		<script type="text/javascript">
+			var glide = $('.slider').glide({
+				autoplay: false,
+				arrows: false,
+			});
+			
+			glide = glide.data('api_glide');
+						
+			$(window).on('click', function (e) {				
+				if($(window).width()/2.0 <= event.clientX){
+					glide.next(console.log("next"));
+				}
+				else if( glide.current() != 1 ){
+					glide.prev(console.log("prev"));
+				}
+				
+				console.log(glide.current());
+			});
+			
+			$(window).on('keydown', function (key) {
+				if (key.keyCode === 13) {
+					glide.next(console.log("next"));
+				};
+			});
+
+		</script>
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45607778-1', 'sngymn.github.io');
+  ga('send', 'pageview');
+
+</script>
+	</body>
+</html>
