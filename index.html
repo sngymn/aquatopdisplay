@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 		<link rel="stylesheet" href="assets/css/ligature-symbols.min.css">
 		<link rel="stylesheet" href="assets/css/orangebox.css">
+		<link rel="stylesheet" href="assets/css/fade.css">
 		
     <script src="assets/js/jquery.min.js"></script>
 <!-- 		<script src="assets/js/modernizr.custom.js"></script> -->
@@ -58,6 +59,22 @@
 
 	<!-- ========== HEADER SECTION ========== -->
 	<section id="home" name="home"></section>
+				<!-- toretama -->
+			<div id="toretama" class="animated fadeInUp">
+			<p>
+  			Greetings all! <br>
+        We've just been nominated for "Innovative Technology of The Year" in a section  of a popular news program in Japan (World Business Satellite) called "Trend Egg".<br><br> 
+        We are one of 12 innovations that have been previous featured in this program   and they will be doing an annual contest to decide the "Innovative Technology of the Year" 
+The voting is decided by popularity votes and likes from this webpage below.
+<br><br>
+<a href="http://www.tv-tokyo.co.jp/wbs/toretama2013/010.html#ttTitle">2013 Toretama Award</a><br><br>
+
+If you like our work, Please vote for us ! <br>
+Push the orange big square button of the right side of the video to vote.
+			</p>
+			</div>
+			
+			<!-- /toretama -->
 	<div id="headerwrap">
 		<div class="container">
 			<br>
@@ -71,6 +88,7 @@
 			</div>
 		</div><!-- /container -->
 	</div><!-- /headerwrap -->
+	
 	
 	<!-- ========== WHITE SECTION ========== -->
 	<div id="w">
@@ -359,6 +377,12 @@
 		});
 		
 		$('a[rel=tooltip]').tooltip();
+		
+    /* toretama */
+    $(window).click(function(e){
+      $("#toretama").removeClass('fadeInUp');
+      $("#toretama").addClass('fadeOut');
+    });
 	</script>
 </body>
 </html>
